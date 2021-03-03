@@ -20,5 +20,6 @@ To create your own dataset, run this:
 - https://towardsdatascience.com/tutorial-using-deep-learning-and-cnns-to-make-a-hand-gesture-recognition-model-371770b63a51 
 - https://www.youtube.com/watch?v=oI2rvjbzVmI&ab_channel=ThalesSehnK%C3%B6rting
 - https://medium.com/@gongster/building-a-simple-artificial-neural-network-with-keras-in-2019-9eccb92527b1
+- https://machinelearningmastery.com/save-load-keras-deep-learning-models/
 
 * cnnModel.py
