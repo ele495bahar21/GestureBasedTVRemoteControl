@@ -14,6 +14,7 @@ Required Setup:
 You will find several links in this document which were helpful for us to learn what to do and how to do them. 
 
 - https://keras.io/getting_started/faq/#what-do-sample-batch-and-epoch-mean
+- https://techcommunity.microsoft.com/t5/apps-on-azure/home-automation-with-power-platform-1-raspberry-pi-to-remote/ba-p/1586165
 
 
 (1) We created our own dataset for our special sign language to control TV. 
