@@ -162,30 +162,30 @@ while True:
         cv2.imshow("drawing", drawing)
         cv2.imshow("img", frame)
 
-        if (command_1 > 9):
-            # 1 komutu
-            os.system("irsend SEND_ONCE Samsung_TV KEY_1")
-        elif (command_2 > 9):
-            # 2 komutu
-            os.system("irsend SEND_ONCE Samsung_TV KEY_2")
-        elif (command_3 > 9):
-            # 3 komutu
-            os.system("irsend SEND_ONCE Samsung_TV KEY_3")
-        elif (command_4 > 9):
-            # 4 komutu
-            os.system("irsend SEND_ONCE Samsung_TV KEY_4")
-        elif (command_5 > 9):
-            # 5 komutu
-            os.system("irsend SEND_ONCE Samsung_TV KEY_5")
-        elif (command_6 > 9):
-            # 6 komutu
-            os.system("irsend SEND_ONCE Samsung_TV KEY_6")
-        elif (command_Channel_Up > 9):
-            # Channel_Up komutu
-            os.system("irsend SEND_ONCE Samsung_TV KEY_CHANNELUP")
-        elif (command_Channel_Down > 9):
-            # Channel_Down komutu
-            os.system("irsend SEND_ONCE Samsung_TV KEY_CHANNELDOWN")
+    if (command_1 > 9):
+        # 1 komutu
+        os.system("irsend SEND_ONCE Samsung_TV KEY_1")
+    elif (command_2 > 9):
+        # 2 komutu
+        os.system("irsend SEND_ONCE Samsung_TV KEY_2")
+    elif (command_3 > 9):
+        # 3 komutu
+        os.system("irsend SEND_ONCE Samsung_TV KEY_3")
+    elif (command_4 > 9):
+        # 4 komutu
+        os.system("irsend SEND_ONCE Samsung_TV KEY_4")
+    elif (command_5 > 9):
+        # 5 komutu
+        os.system("irsend SEND_ONCE Samsung_TV KEY_5")
+    elif (command_6 > 9):
+        # 6 komutu
+        os.system("irsend SEND_ONCE Samsung_TV KEY_6")
+    elif (command_Channel_Up > 9):
+        # Channel_Up komutu
+        os.system("irsend SEND_ONCE Samsung_TV KEY_CHANNELUP")
+    elif (command_Channel_Down > 9):
+        # Channel_Down komutu
+        os.system("irsend SEND_ONCE Samsung_TV KEY_CHANNELDOWN")
 
 #        k = cv2.waitKey(30) & 0xff  # exit if Esc is pressed
 #        if k == 27:

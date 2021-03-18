@@ -14,7 +14,6 @@ Required Setup:
 You will find several links in this document which were helpful for us to learn what to do and how to do them. 
 
 - https://keras.io/getting_started/faq/#what-do-sample-batch-and-epoch-mean
-- https://arxiv.org/pdf/1312.7560.pdf
 
 
 (1) We created our own dataset for our special sign language to control TV. 

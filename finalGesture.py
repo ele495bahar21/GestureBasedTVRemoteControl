@@ -4,9 +4,11 @@
 # Some parts can have few resemblance because of the chosen variable names etc.
 
 # Add necessary libraries.
+import os
 import cv2
 import numpy as np
 import math
+import time
 
 # ----------------- Roadmap of the project ---------------------
 # - Binarize the region of interest (roi=hand)
@@ -34,7 +36,7 @@ def imageFiltering(frame):
     ret, thresh = cv2.threshold(filtered, 127, 255, 0)  # thesholding the image
     thesh = cv2.GaussianBlur(thresh, (5, 5), 0)  # reducing the noise
     # finding contours in the image. Will be used later in complex hull algorithm
-    contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    _, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
     return roi, thresh, contours
 
@@ -109,25 +111,43 @@ while True:
             else:
                 if areaRatio < 12:
                     cv2.putText(frame, "CHANNEL DOWN", (50, 50), font , 2, (0, 0, 255), 2)
+                    os.system("irsend SEND_ONCE Samsung_TV KEY_CHANNELDOWN")
+                    os.system("irsend SEND_ONCE Samsung_TV KEY_OK")
                 elif areaRatio < 17.5:
                     cv2.putText(frame, "6", (50, 50), font , 2, (0, 0, 255), 2)
+                    os.system("irsend SEND_ONCE Samsung_TV KEY_6")
+                    os.system("irsend SEND_ONCE Samsung_TV KEY_OK")
                 else:
                     cv2.putText(frame, '1', (0, 50), font, 2, (0, 0, 255), 3, cv2.LINE_AA)
+                    os.system("irsend SEND_ONCE Samsung_TV KEY_1")
+                    os.system("irsend SEND_ONCE Samsung_TV KEY_OK")
+
 
         elif count_defects == 2:
             cv2.putText(frame, "2", (5, 50), font, 2, (0, 0, 255), 2)
+            os.system("irsend SEND_ONCE Samsung_TV KEY_2")
+            os.system("irsend SEND_ONCE Samsung_TV KEY_OK")
 
         elif count_defects == 3:
             if areaRatio < 27:
                 cv2.putText(frame, "3", (50, 50), font, 2, (0, 0, 255), 2)
+                os.system("irsend SEND_ONCE Samsung_TV KEY_3")
+                os.system("irsend SEND_ONCE Samsung_TV KEY_OK")
             else:
+                # BEST OF LUCK GESTURE
                 cv2.putText(frame, "CHANNEL UP", (50, 50), font, 2, (0, 0, 255), 2)
+                os.system("irsend SEND_ONCE Samsung_TV KEY_CHANNELUP")
+                os.system("irsend SEND_ONCE Samsung_TV KEY_OK")
 
         elif count_defects == 4:
             cv2.putText(frame, "4", (50, 50), font, 2, (0, 0, 255), 2)
+            os.system("irsend SEND_ONCE Samsung_TV KEY_4")
+            os.system("irsend SEND_ONCE Samsung_TV KEY_OK")
 
         elif count_defects == 5:
             cv2.putText(frame, '5', (0, 50), font, 2, (0, 0, 255), 3, cv2.LINE_AA)
+            os.system("irsend SEND_ONCE Samsung_TV KEY_5")
+            os.system("irsend SEND_ONCE Samsung_TV KEY_OK")
 
         elif count_defects == 6:
             cv2.putText(frame, 'reposition', (0, 50), font, 2, (0, 0, 255), 3, cv2.LINE_AA)
