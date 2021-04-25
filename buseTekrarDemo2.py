@@ -34,7 +34,7 @@ def imageFiltering(frame):
     ret, thresh = cv2.threshold(filtered, 127, 255, 0)  # thresholding the image
     thresh = cv2.GaussianBlur(thresh, (5, 5), 0)  # reducing the noise
     # finding contours in the image. Will be used later in complex hull algorithm
-    contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    _, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
     return roi, thresh, contours
 
