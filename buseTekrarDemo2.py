@@ -8,6 +8,7 @@ import cv2
 import numpy as np
 import math
 import time
+import os
 
 # ----------------- Roadmap of the project ---------------------
 # - Binarize the region of interest (roi=hand)
